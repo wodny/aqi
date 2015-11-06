@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+
+# https://en.wikipedia.org/wiki/Air_quality_index#United_States
+
+# Conversion between ug/m3, ppm and ppb by WHO (25C and 1013mb) using a
+# document from DEFRA UK (multiple variant found)
+
+# TODO other conversion methods - eg. including temperature
+# TODO tests for functions sanity
+
+import argparse
+
+chemicals = {
+    # chemical; ug/m3; target unit; precision; levels
+    "o3-8h": ((1.96, "ppb"),   0, [ 0, 55, 71, 86, 106 ]),
+    "o3-1h": ((1.96, "ppb"),   0, [ None, None, 125, 165, 205, 405, 505 ]),
+    "pm25":  ((None, "ug/m3"), 1, [ 0.0, 12.1, 35.5, 55.5, 150.5, 250.5, 350.5 ]),
+    "pm10":  ((None, "ug/m3"), 0, [ 0, 55, 155, 255, 355, 425, 505 ]),
+    "co":    ((1.15, "ppm"),   1, [ 0.0, 4.5, 9.5, 12.5, 15.5, 30.5, 40.5 ]),
+    "so2":   ((2.62, "ppb"),   0, [ 0, 36, 76, 186, 305, 605, 805 ]),
+    "no2":   ((1.88, "ppb"),   0, [ 0, 54, 101, 361, 650, 1250, 1650 ]),
+}
+
+aqi_names = [
+    "Good",
+    "Moderate",
+    "Unhealthy for Sensitive Groups",
+    "Unhealthy",
+    "Very Unhealthy",
+    "Hazardous",
+    "Very Hazardous",
+]
+
+def get_aqi_level(chemical, value):
+    _, precision, levels = chemicals[chemical]
+    value = round(value, precision)
+    prevlevel = 0
+    for aqilevel, level in enumerate(levels):
+        if level is not None and value < level:
+            clow = levels[aqilevel - 1]
+            chigh = levels[aqilevel] - 10 ** (-precision)
+            return (aqilevel - 1, clow, chigh) if prevlevel is not None else (None, None, None)
+        prevlevel = level
+
+def convert_units(chemical, value, unit):
+    ugrams, target_unit = chemicals[chemical][0]
+    if target_unit == unit:
+        return value, target_unit
+    if ugrams is None:
+        return None, None
+    elif unit == "ug/m3":
+        return value / ugrams, target_unit
+    elif (unit, target_unit) == ("ppm", "ppb"):
+        return value * 1000, target_unit
+    elif (unit, target_unit) == ("ppb", "ppm"):
+        return value / 1000, target_unit
+    return None, None
+
+def get_aqi(chemical, value_ou, unit):
+    print("concentration = {:.2f}{}".format(value_ou, unit))
+
+    value, target_unit = convert_units(chemical, value_ou, unit)
+    if value is None:
+        exit("unable to convert units - {} to {}".format(unit, target_unit))
+    print("concentration = {:.2f}{}".format(value, target_unit))
+
+    aqilevel, clow, chigh = get_aqi_level(chemical, value)
+    if aqilevel is None:
+        exit("invalid value - unable to determin AQI level")
+
+    aqilow, aqihigh = aqilevel * 50 + 1, (aqilevel + 1) * 50
+    aqiname = aqi_names[aqilevel]
+    aqi = round((aqihigh - aqilow) / (chigh - clow) * (value - clow) + aqilow)
+    print("concentration = {:.2f}{}, range {}-{}{}".format(value, target_unit, clow, chigh, target_unit))
+    print("AQI = {}, level {} = {}, range {}-{}".format(aqi, aqilevel, aqiname, aqilow, aqihigh))
+
+def get_options():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("chemical", help="chemical name", choices=sorted(chemicals.keys()))
+    parser.add_argument("value", help="chemical concentration", type=float)
+    parser.add_argument("unit", help="chemical unit", default="ug/m3", choices=["ug/m3", "ppm", "ppb"], nargs="?")
+    return parser.parse_args()
+
+def main():
+    options = get_options()
+    aqi = get_aqi(options.chemical, options.value, options.unit)
+
+if __name__ == "__main__":
+    main()
