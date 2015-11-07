@@ -16,7 +16,7 @@ chemicals = {
     "o3-1h": ((1.96, "ppb"),   0, [ None, None, 125, 165, 205, 405, 505 ]),
     "pm25":  ((None, "ug/m3"), 1, [ 0.0, 12.1, 35.5, 55.5, 150.5, 250.5, 350.5 ]),
     "pm10":  ((None, "ug/m3"), 0, [ 0, 55, 155, 255, 355, 425, 505 ]),
-    "co":    ((1.15, "ppm"),   1, [ 0.0, 4.5, 9.5, 12.5, 15.5, 30.5, 40.5 ]),
+    "co":    ((1150, "ppm"),   1, [ 0.0, 4.5, 9.5, 12.5, 15.5, 30.5, 40.5 ]),
     "so2":   ((2.62, "ppb"),   0, [ 0, 36, 76, 186, 305, 605, 805 ]),
     "no2":   ((1.88, "ppb"),   0, [ 0, 54, 101, 361, 650, 1250, 1650 ]),
 }
@@ -41,6 +41,7 @@ def get_aqi_level(chemical, value):
             chigh = levels[aqilevel] - 10 ** (-precision)
             return (aqilevel - 1, clow, chigh) if prevlevel is not None else (None, None, None)
         prevlevel = level
+    return (None, None, None)
 
 def convert_units(chemical, value, unit):
     ugrams, target_unit = chemicals[chemical][0]
@@ -66,7 +67,7 @@ def get_aqi(chemical, value_ou, unit):
 
     aqilevel, clow, chigh = get_aqi_level(chemical, value)
     if aqilevel is None:
-        exit("invalid value - unable to determin AQI level")
+        exit("invalid value - unable to determine AQI level")
 
     aqilow, aqihigh = aqilevel * 50 + 1, (aqilevel + 1) * 50
     aqiname = aqi_names[aqilevel]
