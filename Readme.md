@@ -32,10 +32,10 @@ z danych pochodzących z danych od WIOŚ.
 | Targówek      |   X   |      X      |  X |  X  |  X  |  X |
 | Ursynów       |   X   |      X      |  X |  X  |  X  |    |
 
-Obecność czujnika na danej stacji zaznaczona przez "X". Podano tylko te 
-substancje, które uwzględnia aqicn.org. Serwis ten podaje poziom 
-wszystkich 6 substancji dla każdej lokalizacji, więc dla niektórych 
-z nich musi to być wartość szacunkowa.
+Obecność czujnika na danej [stacji][6] zaznaczona przez "X". Podano 
+tylko te substancje, które uwzględnia aqicn.org. Serwis ten podaje 
+poziom wszystkich 6 substancji dla każdej lokalizacji, więc dla 
+niektórych z nich musi to być wartość szacunkowa.
 
 Stacja Podleśna wydaje się nie działać. Lokalizacje Krucza, Porajów 
 i Puszczy Solskiej nie wydają się być wprost powiązane ze stacjami WIOŚ.
@@ -98,10 +98,10 @@ other data from WIOŚ.
 | Targówek      |   X   |      X      |  X |  X  |  X  |  X |
 | Ursynów       |   X   |      X      |  X |  X  |  X  |    |
 
-Availability of a sensor at a particular station is marked with "X".  
-Only those chemicals which are reported by aqicn.org are included in the 
-table. The site reports levels of all 6 chemicals for every location so 
-for some of them they have be estimated values.
+Availability of a sensor at a particular [station][6] is marked with 
+"X". Only those chemicals which are reported by aqicn.org are included 
+in the table. The site reports levels of all 6 chemicals for every 
+location so for some of them they have be estimated values.
 
 The Podleśna station seems to be offline. Krucza, Porajów and Puszczy 
 Solskiej locations don't seem to be directly associated with WIOŚ 
@@ -138,3 +138,4 @@ AQI = 18, level 0 = Good, range 1-50
 [3]: http://aqicn.org/city/poland/mazowieckie/warszawa/komunikacyjna/
 [4]: http://sojp.wios.warszawa.pl/index.php?page=raport-godzinowy
 [5]: http://wios.warszawa.pl/pl/aktualnosci-i-komunika/komunikaty/1057,KOMUNIKAT-MAZOWIECKIEGO-WOJEWODZKIEGO-INSPEKTORA-OCHRONY-SRODOWISKA-z-dnia-31032.html
+[6]: http://sojp.wios.warszawa.pl/?page=opisy-stacji&t=1&site_id=11
