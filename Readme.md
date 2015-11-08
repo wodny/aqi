@@ -13,8 +13,8 @@ Co zaskakujące, chiński serwis podaje całkiem dokładne dane m.in. dla
 stacji Warszawa-Komunikacyjna.
 
 Na stronach aqicn.org znajduje się ciekawy [artykuł][7] o różnicach 
-między skalami -- między innymi między amerykańskim AQI od EPA oraz IJP 
-używanym przez WIOŚ.
+między skalami -- między innymi między amerykańskim AQI od EPA oraz 
+[IJP][8] używanym przez WIOŚ.
 
 Sprawdź proszę samodzielnie i daj znać o błędach. Niektóre wyliczone 
 wartości mogą się nieco różnić -- wydaje mi się, że może to być 
@@ -84,8 +84,8 @@ Surprisingly it seems that the Chinese site actually reports quite
 accurate data at least for the Warszawa-Komunikacyjna station.
 
 On the aqicn.org site you can find a very interesting [article][7] about 
-differences between different scales -- specifically, the US EPA AQI and 
-IJP used by WIOŚ.
+differences between scales -- specifically, the US EPA AQI and [IJP][8] 
+used by WIOŚ.
 
 Please check yourself and report bugs. Some calculated values differ 
 a bit -- I suppose it may be due to a different averaging method or 
@@ -149,3 +149,4 @@ AQI = 18, level 0 = Good, range 1-50
 [6]: http://sojp.wios.warszawa.pl/?page=opisy-stacji&t=1&site_id=11
 [7]: http://aqicn.org/faq/2015-09-03/air-quality-scale-in-poland/
 [8]: http://aqicn.org/faq/2015-09-06/ozone-aqi-using-concentrations-in-milligrams-or-ppb/
+[9]: http://sojp.wios.warszawa.pl/index.php?page=ggg
