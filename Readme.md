@@ -14,7 +14,7 @@ stacji Warszawa-Komunikacyjna.
 
 Na stronach aqicn.org znajduje się ciekawy [artykuł][7] o różnicach 
 między skalami -- między innymi między amerykańskim AQI od EPA oraz 
-[IJP][8] używanym przez WIOŚ.
+[IJP][9] używanym przez WIOŚ.
 
 Sprawdź proszę samodzielnie i daj znać o błędach. Niektóre wyliczone 
 wartości mogą się nieco różnić -- wydaje mi się, że może to być 
@@ -84,7 +84,7 @@ Surprisingly it seems that the Chinese site actually reports quite
 accurate data at least for the Warszawa-Komunikacyjna station.
 
 On the aqicn.org site you can find a very interesting [article][7] about 
-differences between scales -- specifically, the US EPA AQI and [IJP][8] 
+differences between scales -- specifically, the US EPA AQI and [IJP][9] 
 used by WIOŚ.
 
 Please check yourself and report bugs. Some calculated values differ 
