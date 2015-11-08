@@ -12,10 +12,14 @@ z warszawskiego [WIOŚ][4].
 Co zaskakujące, chiński serwis podaje całkiem dokładne dane m.in. dla 
 stacji Warszawa-Komunikacyjna.
 
+Na stronach aqicn.org znajduje się ciekawy [artykuł][7] o różnicach 
+między skalami -- między innymi między amerykańskim AQI od EPA oraz IJP 
+używanym przez WIOŚ.
+
 Sprawdź proszę samodzielnie i daj znać o błędach. Niektóre wyliczone 
 wartości mogą się nieco różnić -- wydaje mi się, że może to być 
-spowodowane odmiennym sposobem uśredniania lub inną metodą konwersji 
-ug/m3 na ppm.
+spowodowane odmiennym sposobem uśredniania lub inną metodą 
+[konwersji][8] ug/m3 na ppm.
 
 Do wyjaśnienia pozostaje kwestia tego, jak [aqicn.org][3] szacuje 
 wartości dla lokalizacji, które nie odpowiadają stacjom WIOŚ 
@@ -79,9 +83,13 @@ reported by the Varsovian [WIOŚ][4].
 Surprisingly it seems that the Chinese site actually reports quite 
 accurate data at least for the Warszawa-Komunikacyjna station.
 
+On the aqicn.org site you can find a very interesting [article][7] about 
+differences between different scales -- specifically, the US EPA AQI and 
+IJP used by WIOŚ.
+
 Please check yourself and report bugs. Some calculated values differ 
 a bit -- I suppose it may be due to a different averaging method or 
-conversion between ug/m3 and ppm method.
+[conversion][8] between ug/m3 and ppm method.
 
 Further investigation is required to clarify how [aqicn.org][3] 
 estimates values for locations which don't correspond to WIOŚ stations 
@@ -139,3 +147,5 @@ AQI = 18, level 0 = Good, range 1-50
 [4]: http://sojp.wios.warszawa.pl/index.php?page=raport-godzinowy
 [5]: http://wios.warszawa.pl/pl/aktualnosci-i-komunika/komunikaty/1057,KOMUNIKAT-MAZOWIECKIEGO-WOJEWODZKIEGO-INSPEKTORA-OCHRONY-SRODOWISKA-z-dnia-31032.html
 [6]: http://sojp.wios.warszawa.pl/?page=opisy-stacji&t=1&site_id=11
+[7]: http://aqicn.org/faq/2015-09-03/air-quality-scale-in-poland/
+[8]: http://aqicn.org/faq/2015-09-06/ozone-aqi-using-concentrations-in-milligrams-or-ppb/
