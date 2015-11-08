@@ -23,7 +23,25 @@ wartości dla lokalizacji, które nie odpowiadają stacjom WIOŚ
 stężenia dana stacja nie mierzy. W szczególności, czy jest to średnia 
 z danych pochodzących z danych od WIOŚ.
 
-Dostępne substancje:
+## Stacje WIOŚ
+
+|    Warszawa   | PM2.5 |     PM10    | O3 | NO2 | SO2 | CO |
+|:-------------:|:-----:|:-----------:|:--:|:---:|:---:|:--:|
+| Komunikacyjna |   X   |      X      |    |  X  |  X  |  X |
+| Marszałkowska |       | X (no data) |    |  X  |     |  X |
+| Targówek      |   X   |      X      |  X |  X  |  X  |  X |
+| Ursynów       |   X   |      X      |  X |  X  |  X  |    |
+
+Obecność czujnika na danej stacji zaznaczona przez "X". Podano tylko te 
+substancje, które uwzględnia aqicn.org. Serwis ten podaje poziom 
+wszystkich 6 substancji dla każdej lokalizacji, więc dla niektórych 
+z nich musi to być wartość szacunkowa.
+
+Stacja Podleśna wydaje się nie działać. Lokalizacje Krucza, Porajów 
+i Puszczy Solskiej nie wydają się być wprost powiązane ze stacjami WIOŚ.
+
+## Dostępne substancje
+
 * ozon (O3),
 * pył zawieszony poniżej 10 mikronów (PM10),
 * pył zawieszony poniżej 2.5 mikrona (PM2.5),
@@ -31,7 +49,8 @@ Dostępne substancje:
 * dwutlenek siarki (SO2),
 * dwutlenek azotu (NO2).
 
-Przykłady:
+## Przykłady
+
 ```
 $ ./aqi pm25 114.3
 concentration = 114.30ug/m3
@@ -70,7 +89,26 @@ estimates values for locations which don't correspond to WIOŚ stations
 monitored at a particular station. Specifically, if it is an average of 
 other data from WIOŚ.
 
-Available chemicals:
+## WIOŚ stations
+
+|    Warszawa   | PM2.5 |     PM10    | O3 | NO2 | SO2 | CO |
+|:-------------:|:-----:|:-----------:|:--:|:---:|:---:|:--:|
+| Komunikacyjna |   X   |      X      |    |  X  |  X  |  X |
+| Marszałkowska |       | X (no data) |    |  X  |     |  X |
+| Targówek      |   X   |      X      |  X |  X  |  X  |  X |
+| Ursynów       |   X   |      X      |  X |  X  |  X  |    |
+
+Availability of a sensor at a particular station is marked with "X".  
+Only those chemicals which are reported by aqicn.org are included in the 
+table. The site reports levels of all 6 chemicals for every location so 
+for some of them they have be estimated values.
+
+The Podleśna station seems to be offline. Krucza, Porajów and Puszczy 
+Solskiej locations don't seem to be directly associated with WIOŚ 
+stations.
+
+## Available chemicals
+
 * ozone (O3),
 * particulate matter under 10um (PM10),
 * particulate matter under 2.5um (PM2.5),
@@ -78,7 +116,8 @@ Available chemicals:
 * sulphur dioxide (SO2),
 * nitrogen dioxide (NO2).
 
-Examples:
+## Examples
+
 ```
 $ ./aqi pm25 114.3
 concentration = 114.30ug/m3
