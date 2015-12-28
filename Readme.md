@@ -9,9 +9,6 @@ i chciałem to sprawdzić samodzielnie. Serwis ten dla każdej z substancji
 wylicza AQI na podstawie poziomów wyrażonych w ug/m3 pochodzących 
 z warszawskiego [WIOŚ][4].
 
-Co zaskakujące, chiński serwis podaje całkiem dokładne dane m.in. dla 
-stacji Warszawa-Komunikacyjna.
-
 Na stronach aqicn.org znajduje się ciekawy [artykuł][7] o różnicach 
 między skalami -- między innymi między amerykańskim AQI od EPA oraz 
 [IJP][9] używanym przez WIOŚ.
@@ -115,9 +112,6 @@ This tool has been created because some [specialists][5] [state][2] that
 values available on [aqicn.org][3] are incorrect and I wanted to verify 
 it. That site calculates AQI from ug/m3 levels for every chemical 
 reported by the Varsovian [WIOŚ][4].
-
-Surprisingly it seems that the Chinese site actually reports quite 
-accurate data at least for the Warszawa-Komunikacyjna station.
 
 On the aqicn.org site you can find a very interesting [article][7] about 
 differences between scales -- specifically, the US EPA AQI and [IJP][9] 
