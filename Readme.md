@@ -22,10 +22,9 @@ spowodowane odmiennym sposobem uśredniania lub inną metodą
 [konwersji][8] ug/m3 na ppm.
 
 Do wyjaśnienia pozostaje kwestia tego, jak [aqicn.org][3] szacuje 
-wartości dla lokalizacji, które nie odpowiadają stacjom WIOŚ 
-(nieistniejące lub wyłączone) oraz dane dotyczące substancji, których
-stężenia dana stacja nie mierzy. W szczególności, czy jest to średnia 
-z danych pochodzących z danych od WIOŚ.
+wartości dotyczące substancji, których stężenia dana stacja nie mierzy.  
+W szczególności, czy jest to średnia z danych pochodzących z danych od 
+WIOŚ.
 
 ## Stacje WIOŚ
 
@@ -52,7 +51,8 @@ przeliczył swoje dane na AQI, a następnie wyrywkowo porównał z danymi
 prezentowanymi przez chiński serwis. Porównanie potwierdziło 
 występowanie znacznych różnic, więc nie jest to jedynie problem innych 
 jednostek. WIOŚ zwrócił również ponownie uwagę na fakt, że stacja Krucza 
-jest od dawna wyłączona.
+jest od dawna wyłączona. Serwis aqicn.org odnotował już ten fakt 
+i oznaczył [stację][13] w specjalny sposób.
 
 W międzyczasie odkryłem, że serwis WIOŚ oparty o *CMS Made Simple* co 
 jakiś czas zwraca błędne dane (dla innej stacji, daty, zestawu 
@@ -125,10 +125,8 @@ a bit -- I suppose it may be due to a different averaging method or
 [conversion][8] between ug/m3 and ppm method.
 
 Further investigation is required to clarify how [aqicn.org][3] 
-estimates values for locations which don't correspond to WIOŚ stations 
-(non-existent or disabled) and how it estimates levels of chemicals not 
-monitored at a particular station. Specifically, if it is an average of 
-other data from WIOŚ.
+estimates levels of chemicals not monitored at a particular station.  
+Specifically, if it is an average of other data from WIOŚ.
 
 ## WIOŚ stations
 
@@ -155,7 +153,8 @@ WIOŚ converted their data to AQI values and then compared a couple of
 them with data presented by the Chinese website. The comparison 
 confirmed significant differences for some cases, so it wasn't just 
 a problem of converting units. WIOŚ pointed out again that the Krucza 
-station is long offline.
+station is long offline. The aqicn.org site has noted that and marked 
+the [station][13] as being offline.
 
 In the meantime I discovered that from time to time the WIOŚ site based 
 on *CMS Made Simple* responds with incorrect data (wrong station, date, 
@@ -218,3 +217,4 @@ AQI = 18, level 0 = Good, range 1-50
 [10]: http://o-blache.blogspot.com/2015/11/podanie-do-wios-o-udzielenie-informacji.html
 [11]: http://feedback.aqicn.org/forums/162638-general/suggestions/11222325-use-the-new-source-of-data-for-poland-gios-gov-p
 [12]: http://powietrze.gios.gov.pl/pjp/current
+[13]: http://aqicn.org/city/poland/mazowieckie/warszawa/krucza/
