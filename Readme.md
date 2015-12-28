@@ -29,12 +29,12 @@ z danych pochodzących z danych od WIOŚ.
 
 ## Stacje WIOŚ
 
-|    Warszawa   | PM2.5 |     PM10    | O3 | NO2 | SO2 | CO |
-|:-------------:|:-----:|:-----------:|:--:|:---:|:---:|:--:|
-| Komunikacyjna |   X   |      X      |    |  X  |  X  |  X |
-| Marszałkowska |       | X (no data) |    |  X  |     |  X |
-| Targówek      |   X   |      X      |  X |  X  |  X  |  X |
-| Ursynów       |   X   |      X      |  X |  X  |  X  |    |
+|    Warszawa   | PM2.5 | PM10  | O3 | NO2 | SO2 | CO |
+|:-------------:|:-----:|:-----:|:--:|:---:|:---:|:--:|
+| Komunikacyjna |   X   |   X   |    |  X  |  X  |  X |
+| Marszałkowska |   X   |   X   |    |  X  |     |  X |
+| Targówek      |   X   |   X   |  X |  X  |  X  |  X |
+| Ursynów       |   X   |   X   |  X |  X  |  X  |    |
 
 Obecność czujnika na danej [stacji][6] zaznaczona przez "X". Podano 
 tylko te substancje, które uwzględnia aqicn.org. Serwis ten podaje 
@@ -132,12 +132,12 @@ other data from WIOŚ.
 
 ## WIOŚ stations
 
-|    Warszawa   | PM2.5 |     PM10    | O3 | NO2 | SO2 | CO |
-|:-------------:|:-----:|:-----------:|:--:|:---:|:---:|:--:|
-| Komunikacyjna |   X   |      X      |    |  X  |  X  |  X |
-| Marszałkowska |       | X (no data) |    |  X  |     |  X |
-| Targówek      |   X   |      X      |  X |  X  |  X  |  X |
-| Ursynów       |   X   |      X      |  X |  X  |  X  |    |
+|    Warszawa   | PM2.5 | PM10  | O3 | NO2 | SO2 | CO |
+|:-------------:|:-----:|:-----:|:--:|:---:|:---:|:--:|
+| Komunikacyjna |   X   |   X   |    |  X  |  X  |  X |
+| Marszałkowska |   X   |   X   |    |  X  |     |  X |
+| Targówek      |   X   |   X   |  X |  X  |  X  |  X |
+| Ursynów       |   X   |   X   |  X |  X  |  X  |    |
 
 Availability of a sensor at a particular [station][6] is marked with 
 "X". Only those chemicals which are reported by aqicn.org are included 
