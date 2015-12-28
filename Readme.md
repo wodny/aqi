@@ -27,7 +27,7 @@ WIOŚ.
 
 |    Warszawa   | PM2.5 | PM10  | O3 | NO2 | SO2 | CO |
 |:-------------:|:-----:|:-----:|:--:|:---:|:---:|:--:|
-| Komunikacyjna |   X   |   X   |    |  X  |  X  |  X |
+| Komunikacyjna |   X   |   X   |    |  X  |     |  X |
 | Marszałkowska |   X   |   X   |    |  X  |     |  X |
 | Targówek      |   X   |   X   |  X |  X  |  X  |  X |
 | Ursynów       |   X   |   X   |  X |  X  |  X  |    |
@@ -129,7 +129,7 @@ Specifically, if it is an average of other data from WIOŚ.
 
 |    Warszawa   | PM2.5 | PM10  | O3 | NO2 | SO2 | CO |
 |:-------------:|:-----:|:-----:|:--:|:---:|:---:|:--:|
-| Komunikacyjna |   X   |   X   |    |  X  |  X  |  X |
+| Komunikacyjna |   X   |   X   |    |  X  |     |  X |
 | Marszałkowska |   X   |   X   |    |  X  |     |  X |
 | Targówek      |   X   |   X   |  X |  X  |  X  |  X |
 | Ursynów       |   X   |   X   |  X |  X  |  X  |    |
