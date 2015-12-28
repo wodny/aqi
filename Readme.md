@@ -43,6 +43,9 @@ niektórych z nich musi to być wartość szacunkowa.
 Stacja Podleśna wydaje się nie działać. Lokalizacje Porajów i Puszczy 
 Solskiej nie wydają się być wprost powiązane ze stacjami WIOŚ.
 
+Stacja Warszawa Komunikacyjna (Al. Niepodległości) jest aktualnie 
+niedostępna w serwisie aqicn.org.
+
 ## Dane aqicn.org vs WIOŚ vs GIOŚ
 
 Otrzymałem odpowiedź na skierowane do WIOŚ [zapytanie][10] o źródło 
@@ -144,6 +147,9 @@ location so for some of them they have be estimated values.
 
 The Podleśna station seems to be offline. Porajów and Puszczy Solskiej 
 locations don't seem to be directly associated with WIOŚ stations.
+
+The Komunikacyjna (Al. Niepodległości) station is currently unavailable 
+on aqicn.org.
 
 ## Data from aqicn.org vs WIOŚ vs GIOŚ
 
