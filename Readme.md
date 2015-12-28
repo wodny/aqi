@@ -41,8 +41,41 @@ tylko te substancje, które uwzględnia aqicn.org. Serwis ten podaje
 poziom wszystkich 6 substancji dla każdej lokalizacji, więc dla 
 niektórych z nich musi to być wartość szacunkowa.
 
-Stacja Podleśna wydaje się nie działać. Lokalizacje Krucza, Porajów 
-i Puszczy Solskiej nie wydają się być wprost powiązane ze stacjami WIOŚ.
+Stacja Podleśna wydaje się nie działać. Lokalizacje Porajów i Puszczy 
+Solskiej nie wydają się być wprost powiązane ze stacjami WIOŚ.
+
+## Dane aqicn.org vs WIOŚ vs GIOŚ
+
+Otrzymałem odpowiedź na skierowane do WIOŚ [zapytanie][10] o źródło 
+twierdzenia, że aqicn.org podaje błędne dane. Najwyraźniej WIOŚ 
+przeliczył swoje dane na AQI, a następnie wyrywkowo porównał z danymi 
+prezentowanymi przez chiński serwis. Porównanie potwierdziło 
+występowanie znacznych różnic, więc nie jest to jedynie problem innych 
+jednostek. WIOŚ zwrócił również ponownie uwagę na fakt, że stacja Krucza 
+jest od dawna wyłączona.
+
+W międzyczasie odkryłem, że serwis WIOŚ oparty o *CMS Made Simple* co 
+jakiś czas zwraca błędne dane (dla innej stacji, daty, zestawu 
+substancji). Prawdopodobnie wynika to z błędnego działania pamięci 
+podręcznej CMS-a. Sytuację można łatwo rozpoznać po tym, że w źródle 
+pojawia się fraza:
+
+```
+<!-- Generated in 0.91902 seconds by CMS Made Simple 0.10.3 (cached) using 11 SQL queries -->
+```
+
+zamiast:
+
+```
+<!-- Generated in 0,92187 seconds by CMS Made Simple 0.10.3 (not cached) using 18 SQL queries -->
+```
+
+Sytuacja może wpływać na dane prezentowane przez aqicn.org, jeśli serwis 
+stosuje web scraping. WIOŚ został poinformowany o problemie i obiecał 
+przekazanie informacji informatykom.
+
+Tymczasem serwis aqicn.org [rozpoczął prace][11] nad przejściem na 
+korzystanie z danych pochodzących z [nowego portalu][12] GIOŚ.
 
 ## Dostępne substancje
 
@@ -111,9 +144,41 @@ Availability of a sensor at a particular [station][6] is marked with
 in the table. The site reports levels of all 6 chemicals for every 
 location so for some of them they have be estimated values.
 
-The Podleśna station seems to be offline. Krucza, Porajów and Puszczy 
-Solskiej locations don't seem to be directly associated with WIOŚ 
-stations.
+The Podleśna station seems to be offline. Porajów and Puszczy Solskiej 
+locations don't seem to be directly associated with WIOŚ stations.
+
+## Data from aqicn.org vs WIOŚ vs GIOŚ
+
+I received a reply to my [inquiry][10] to WIOŚ about the basis of the 
+statement suggesting that aqicn.org publishes incorrect data. Apparently 
+WIOŚ converted their data to AQI values and then compared a couple of 
+them with data presented by the Chinese website. The comparison 
+confirmed significant differences for some cases, so it wasn't just 
+a problem of converting units. WIOŚ pointed out again that the Krucza 
+station is long offline.
+
+In the meantime I discovered that from time to time the WIOŚ site based 
+on *CMS Made Simple* responds with incorrect data (wrong station, date, 
+set of substances). Probably it's because of the faulty cache mechanism 
+of the CMS. The situation is easily detectable by looking for the 
+following phrase in the HTML source code:
+
+```
+<!-- Generated in 0.91902 seconds by CMS Made Simple 0.10.3 (cached) using 11 SQL queries -->
+```
+
+Instead of the following information when a response is correct:
+
+```
+<!-- Generated in 0,92187 seconds by CMS Made Simple 0.10.3 (not cached) using 18 SQL queries -->
+```
+
+This situation may influence data presented by aqicn.org if the site 
+uses web scraping. WIOŚ has been notified about the problem and promised 
+to notify the IT guys.
+
+In the meantime aqicn.org [started working][11] on the transition to the 
+new source of data, i.e. [new GIOŚ portal][12].
 
 ## Available chemicals
 
@@ -150,3 +215,6 @@ AQI = 18, level 0 = Good, range 1-50
 [7]: http://aqicn.org/faq/2015-09-03/air-quality-scale-in-poland/
 [8]: http://aqicn.org/faq/2015-09-06/ozone-aqi-using-concentrations-in-milligrams-or-ppb/
 [9]: http://sojp.wios.warszawa.pl/index.php?page=ggg
+[10]: http://o-blache.blogspot.com/2015/11/podanie-do-wios-o-udzielenie-informacji.html
+[11]: http://feedback.aqicn.org/forums/162638-general/suggestions/11222325-use-the-new-source-of-data-for-poland-gios-gov-p
+[12]: http://powietrze.gios.gov.pl/pjp/current
