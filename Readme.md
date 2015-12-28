@@ -70,9 +70,9 @@ zamiast:
 <!-- Generated in 0,92187 seconds by CMS Made Simple 0.10.3 (not cached) using 18 SQL queries -->
 ```
 
-Sytuacja może wpływać na dane prezentowane przez aqicn.org, jeśli serwis 
-stosuje web scraping. WIOŚ został poinformowany o problemie i obiecał 
-przekazanie informacji informatykom.
+WIOŚ został o tym poinformowany i obiecał przekazanie informacji 
+informatykom.  Serwis aqicn.org potwierdził, że problem wpłynął na 
+prezentowane przezeń dane.
 
 Tymczasem serwis aqicn.org [rozpoczął prace][11] nad przejściem na 
 korzystanie z danych pochodzących z [nowego portalu][12] GIOŚ.
@@ -172,9 +172,9 @@ Instead of the following information when a response is correct:
 <!-- Generated in 0,92187 seconds by CMS Made Simple 0.10.3 (not cached) using 18 SQL queries -->
 ```
 
-This situation may influence data presented by aqicn.org if the site 
-uses web scraping. WIOŚ has been notified about the problem and promised 
-to notify the IT guys.
+WIOŚ has been notified about the problem and promised to notify the IT 
+guys. The aqicn.org site confirmed that it influenced the presented 
+data. 
 
 In the meantime aqicn.org [started working][11] on the transition to the 
 new source of data, i.e. [new GIOŚ portal][12].
