@@ -14,14 +14,9 @@ między skalami -- między innymi między amerykańskim AQI od EPA oraz
 [IJP][9] używanym przez WIOŚ.
 
 Sprawdź proszę samodzielnie i daj znać o błędach. Niektóre wyliczone 
-wartości mogą się nieco różnić -- wydaje mi się, że może to być 
+wartości mogą się nieco różnić -- wydaje mi się, że może to być 
 spowodowane odmiennym sposobem uśredniania lub inną metodą 
 [konwersji][8] ug/m3 na ppm.
-
-Do wyjaśnienia pozostaje kwestia tego, jak [aqicn.org][3] szacuje 
-wartości dotyczące substancji, których stężenia dana stacja nie mierzy.  
-W szczególności, czy jest to średnia z danych pochodzących z danych od 
-WIOŚ.
 
 ## Stacje WIOŚ
 
@@ -35,7 +30,7 @@ WIOŚ.
 Obecność czujnika na danej [stacji][6] zaznaczona przez "X". Podano 
 tylko te substancje, które uwzględnia aqicn.org. Serwis ten podaje 
 poziom wszystkich 6 substancji dla każdej lokalizacji, więc dla 
-niektórych z nich musi to być wartość szacunkowa.
+niektórych z nich musi to być wartość szacunkowa.
 
 Stacja Podleśna wydaje się nie działać. Lokalizacje Porajów i Puszczy 
 Solskiej nie wydają się być wprost powiązane ze stacjami WIOŚ.
@@ -45,16 +40,16 @@ niedostępna w serwisie aqicn.org.
 
 ## Dane aqicn.org vs WIOŚ vs GIOŚ
 
-Otrzymałem odpowiedź na skierowane do WIOŚ [zapytanie][10] o źródło 
+Otrzymałem odpowiedź na skierowane do WIOŚ [zapytanie][10] o źródło 
 twierdzenia, że aqicn.org podaje błędne dane. Najwyraźniej WIOŚ 
-przeliczył swoje dane na AQI, a następnie wyrywkowo porównał z danymi 
+przeliczył swoje dane na AQI, a następnie wyrywkowo porównał z danymi 
 prezentowanymi przez chiński serwis. Porównanie potwierdziło 
 występowanie znacznych różnic, więc nie jest to jedynie problem innych 
 jednostek. WIOŚ zwrócił również ponownie uwagę na fakt, że stacja Krucza 
 jest od dawna wyłączona. Serwis aqicn.org odnotował już ten fakt 
 i oznaczył [stację][13] w specjalny sposób.
 
-W międzyczasie odkryłem, że serwis WIOŚ oparty o *CMS Made Simple* co 
+W międzyczasie odkryłem, że serwis WIOŚ oparty o *CMS Made Simple* co 
 jakiś czas zwraca błędne dane (dla innej stacji, daty, zestawu 
 substancji). Prawdopodobnie wynika to z błędnego działania pamięci 
 podręcznej CMS-a. Sytuację można łatwo rozpoznać po tym, że w źródle 
@@ -70,11 +65,18 @@ zamiast:
 <!-- Generated in 0,92187 seconds by CMS Made Simple 0.10.3 (not cached) using 18 SQL queries -->
 ```
 
-WIOŚ został o tym poinformowany i obiecał przekazanie informacji 
-informatykom.  Serwis aqicn.org potwierdził, że problem wpłynął na 
-prezentowane przezeń dane.
+WIOŚ i aqicn.org zostali poinformowani o błędzie. WIOŚ obiecał 
+przekazanie informacji swoim informatykom. 
 
-Tymczasem serwis aqicn.org [rozpoczął prace][11] nad przejściem na 
+Serwis aqicn.org potwierdził, że problem wpłynął na prezentowane przezeń 
+dane. Pod koniec grudnia 2015 serwis wprowadził poprawkę opartą 
+o wykrywanie przypadków, gdy strona WIOŚ serwowana jest z pamięci 
+podręcznej. Poinformował również, że nigdy nie stosował interpolacji 
+wartości dla brakujących czujników na podstawie danych z sąsiednich 
+stacji w Warszawie. Obecność nieistniejących czujników i stacji wynikała 
+jedynie z błędnego działania strony WIOŚ.
+
+W międzyczasie aqicn.org [rozpoczął prace][11] nad przejściem na 
 korzystanie z danych pochodzących z [nowego portalu][12] GIOŚ.
 
 ## Dostępne substancje
@@ -121,10 +123,6 @@ Please check yourself and report bugs. Some calculated values differ
 a bit -- I suppose it may be due to a different averaging method or 
 [conversion][8] between ug/m3 and ppm method.
 
-Further investigation is required to clarify how [aqicn.org][3] 
-estimates levels of chemicals not monitored at a particular station.  
-Specifically, if it is an average of other data from WIOŚ.
-
 ## WIOŚ stations
 
 |    Warszawa   | PM2.5 | PM10  | O3 | NO2 | SO2 | CO |
@@ -152,11 +150,11 @@ statement suggesting that aqicn.org publishes incorrect data. Apparently
 WIOŚ converted their data to AQI values and then compared a couple of 
 them with data presented by the Chinese website. The comparison 
 confirmed significant differences for some cases, so it wasn't just 
-a problem of converting units. WIOŚ pointed out again that the Krucza 
+a problem of converting units. WIOŚ pointed out again that the Krucza 
 station is long offline. The aqicn.org site has noted that and marked 
 the [station][13] as being offline.
 
-In the meantime I discovered that from time to time the WIOŚ site based 
+In the meantime I discovered that from time to time the WIOŚ site based 
 on *CMS Made Simple* responds with incorrect data (wrong station, date, 
 set of substances). Probably it's because of the faulty cache mechanism 
 of the CMS. The situation is easily detectable by looking for the 
@@ -172,9 +170,16 @@ Instead of the following information when a response is correct:
 <!-- Generated in 0,92187 seconds by CMS Made Simple 0.10.3 (not cached) using 18 SQL queries -->
 ```
 
-WIOŚ has been notified about the problem and promised to notify the IT 
-guys. The aqicn.org site confirmed that it influenced the presented 
-data. 
+WIOŚ and Aqicn.org have been notified about the bug. WIOŚ promised to 
+notify their IT guys.
+
+Aqicn.org confirmed that the bug influenced the data presented on their 
+site. At the end of December 2015 the site applied a patch based on 
+detection of cases when the WIOŚ site serves data from cache. Aqicn.org 
+also informed that they have never interpolated values for missing 
+sensors using data from nearby stations in Warsaw. Presence of 
+nonexistent sensors and stations was caused solely by the bug on the 
+WIOŚ site.
 
 In the meantime aqicn.org [started working][11] on the transition to the 
 new source of data, i.e. [new GIOŚ portal][12].
